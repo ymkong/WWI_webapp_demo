@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include "MetaSet.html" %}
+	{% include "BsAndJq.html" %}
+	
+	{% if user.isVisitor %}
+	{% include "LoginSet.html" %}
+    {% endif %}    
+</head>
+<body>
+
+    {% include "Nav.html" %}
+
+	{% include "OV.html" %}
+</body>
+</html>

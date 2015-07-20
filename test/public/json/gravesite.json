@@ -1,0 +1,10 @@
+{
+    "id": "2",
+    "name": "Gravesite",
+    "description": "Meuse-Argonne is the largest American military cemetery in Europe with 14,246 burials",
+    "coordinates": [
+        49.333235,
+        5.094889
+    ],
+    "image":"ps2.jpg"
+}

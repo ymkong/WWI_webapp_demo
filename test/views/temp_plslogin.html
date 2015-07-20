@@ -1,0 +1,21 @@
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}    
+</head>
+<body class="home">
+
+    {% include "Nav.html" %}
+
+<div class="info">
+    <div class="container">
+        <p style="font-size: 14px">Please login first.</p>                
+   </div>     
+</div>
+
+</body>
+</html>

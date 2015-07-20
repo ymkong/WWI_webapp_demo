@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}   
+    <script type="text/javascript" src="/public/javascripts/storymap.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+</head>
+
+<body>  
+
+<div class="tellstory">
+    {% include "Nav.html" %}
+    
+	<div class="container">
+        <h2>Tell your story</h2>
+
+        <form role="form" method="post" action = "/postdata">
+            <label for="keywords" class="required">Title</label>
+            <input type="text" name="title" id="title" class="form-control" tabindex="1" >
+            <br>
+
+            <label for="cat" class="required">Category</label><br>
+            <input type="radio" name="category" id = "war" value="war">War
+            <input type="radio" name="category" id = "love" value="love">Love
+            <input type="radio" name="category" id = "family" value="family">Family
+            <input type="radio" name="category" id = "people" value="people">People
+            <input type="radio" name="category" id = "others" value="others" checked>Others
+            <br><br>
+
+            <label for="keywords" class="required">Where does this story happen?</label>
+            <p>(if you don't know, just leave it at (0, 0)</p>
+            <input type="text" name="lat" id="lat" class="form-control" tabindex="1" >
+            <input type="text" name="lng" id="lng" class="form-control" tabindex="1" >
+            <a href="#" class="btn btn-primary" onclick="displayMap()" id="mymapbutton">locate it on map</a>
+
+            <!-- This is for the embeded map -->
+            <!-- <div class="container">
+                <div id='googleMap' style='width:500px;height:380px;display:none'></div>
+            </div> -->
+            <div id="map_canvas" style="width:700px; height:500px; display: none" ></div>
+            
+            <!-- <div class="container" id="inpagegmap">
+            </div> -->
+
+            <br><br>
+            <label for="comment" class="required">Your story</label>
+            <textarea name="comment" id="comment" rows="10" tabindex="4" required="required" class="form-control status-box" placeholder="What's on your mind?"></textarea>
+
+            <input type="text" name="aboutp" id="aboutp" class="form-control" tabindex="1" style="display:none">
+            <input type="text" name="cid" id="cid" class="form-control" tabindex="1" style="display:none">            
+
+            <input name="submit" type="submit" value="Submit">
+        </form>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var incoming_lat = '{{user.incoming_lat}}';
+        var incoming_lng = '{{user.incoming_lng}}';
+        // if(incoming_lat != 0 && incoming_lng != 0){
+            $("#lat").val(incoming_lat);
+            $("#lng").val(incoming_lng);
+        // }
+
+        var about_people = '{{user.about_people}}';
+        // alert(about_people);
+
+        if(about_people == 1){
+            // alert("about people");
+            var first_name = '{{user.fn}}';
+            var last_name = '{{user.ln}}';
+            $("#people").prop('checked', true);
+            document.getElementById("war").disabled = true;
+            document.getElementById("love").disabled = true;
+            document.getElementById("family").disabled = true;
+            document.getElementById("others").disabled = true;
+            document.getElementById("people").disabled = true;
+
+            $("#title").val(first_name + " " + last_name);
+
+            $("#aboutp").val(1);
+            $("#cid").val('{{user.character_id}}');
+        }else{
+            // alert("not about people");
+            $("#aboutp").val(0);
+            $("#cid").val(-1);
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+<!--             <label for="name">Keywords:</label>
+            <input type="text" name="keyword" class="form-control" id="keyword"><br>
+            
+            <label for="name">Story:</label>
+            <input type="text" name="story" class="form-control" id="story"><br>
+            
+            <input type="submit" name="submit" value="Submit">  
+ -->
+<!--             <select class="form-control" name="category">
+                <option value="war">war</option>
+                <option value="love">love</option>
+                <option value="family">family</option>
+            </select>
+ -->

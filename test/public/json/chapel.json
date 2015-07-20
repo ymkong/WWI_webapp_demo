@@ -1,0 +1,10 @@
+{
+    "id": "6",
+    "name": "Chapel",
+    "description": "The chapel contains memorial inscriptions of all that are buried",
+    "coordinates": [
+        49.330542,
+        5.093907
+    ],
+    "image":"ps6.jpg"
+}

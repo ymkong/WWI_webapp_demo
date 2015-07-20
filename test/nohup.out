@@ -1,0 +1,100 @@
+
+> auth0-nodejs-regular-webapp-sample@0.1.0 start /home/ubuntu/test/test
+> node server.js
+
+Wed, 08 Jul 2015 17:00:10 GMT body-parser deprecated undefined extended: provide extended option at config.js:18:22
+Wed, 08 Jul 2015 17:00:10 GMT express-session deprecated undefined resave option; provide resave option at config.js:30:11
+Wed, 08 Jul 2015 17:00:10 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at config.js:30:11
+false
+false
+false
+listening in http://localhost:9000
+profile is { provider: 'auth0',
+  displayName: 'demo@2.com',
+  id: 'auth0|10',
+  name: { familyName: undefined, givenName: undefined },
+  emails: [ { value: 'demo@2.com' } ],
+  picture: 'https://secure.gravatar.com/avatar/ed6d13576f76da107678d8bd5a3bc4af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fde.png',
+  nickname: 'demo',
+  identities: 
+   [ { user_id: '10',
+       provider: 'auth0',
+       connection: 'test',
+       isSocial: false } ],
+  _json: 
+   { email: 'demo@2.com',
+     clientID: 'xGjDAlZFFBWziZsiOcT3cLvEBq9RsLDA',
+     updated_at: '2015-07-08T17:09:59.983Z',
+     picture: 'https://secure.gravatar.com/avatar/ed6d13576f76da107678d8bd5a3bc4af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fde.png',
+     user_id: 'auth0|10',
+     name: 'demo@2.com',
+     nickname: 'demo',
+     identities: [ [Object] ],
+     created_at: '2015-07-08T17:09:59.983Z' },
+  _raw: '{"email":"demo@2.com","clientID":"xGjDAlZFFBWziZsiOcT3cLvEBq9RsLDA","updated_at":"2015-07-08T17:09:59.983Z","picture":"https://secure.gravatar.com/avatar/ed6d13576f76da107678d8bd5a3bc4af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fde.png","user_id":"auth0|10","name":"demo@2.com","nickname":"demo","identities":[{"user_id":"10","provider":"auth0","connection":"test","isSocial":false}],"created_at":"2015-07-08T17:09:59.983Z"}' }
+false
+true
+200
+success
+TypeError: Cannot read property 'nickname' of undefined
+    at /home/ubuntu/test/test/routes/postdata.js:7:23
+    at Layer.handle [as handle_request] (/home/ubuntu/test/test/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/test/test/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/ubuntu/test/test/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/test/test/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/test/test/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/ubuntu/test/test/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ubuntu/test/test/node_modules/express/lib/router/index.js:271:10)
+    at SessionStrategy.strategy.pass (/home/ubuntu/test/test/node_modules/passport/lib/middleware/authenticate.js:318:9)
+    at SessionStrategy.authenticate (/home/ubuntu/test/test/node_modules/passport/lib/strategies/session.js:67:10)
+TypeError: Cannot read property 'nickname' of undefined
+    at /home/ubuntu/test/test/routes/postdata.js:7:23
+    at Layer.handle [as handle_request] (/home/ubuntu/test/test/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/test/test/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/home/ubuntu/test/test/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/test/test/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/test/test/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/home/ubuntu/test/test/node_modules/express/lib/router/index.js:330:12)
+    at next (/home/ubuntu/test/test/node_modules/express/lib/router/index.js:271:10)
+    at SessionStrategy.strategy.pass (/home/ubuntu/test/test/node_modules/passport/lib/middleware/authenticate.js:318:9)
+    at SessionStrategy.authenticate (/home/ubuntu/test/test/node_modules/passport/lib/strategies/session.js:67:10)
+true
+false
+false
+false
+profile is { provider: 'google-oauth2',
+  displayName: 'Catherine-Marie Bisque',
+  id: 'google-oauth2|108550779637671854050',
+  name: { familyName: 'Bisque', givenName: 'Catherine-Marie' },
+  emails: [ { value: 'cmariebisque@gmail.com' } ],
+  picture: 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg',
+  locale: 'en',
+  nickname: 'cmariebisque',
+  identities: 
+   [ { access_token: 'ya29.qgFdOrD2ojiJGCaCBAorzxP1D8ARFQAjvTzW6sEQSLHyOdP9Q55PnCZmXb8IIGp1Rq3Rkc4skHwrIA',
+       provider: 'google-oauth2',
+       expires_in: 3600,
+       user_id: '108550779637671854050',
+       connection: 'google-oauth2',
+       isSocial: true } ],
+  _json: 
+   { email: 'cmariebisque@gmail.com',
+     email_verified: true,
+     name: 'Catherine-Marie Bisque',
+     given_name: 'Catherine-Marie',
+     family_name: 'Bisque',
+     picture: 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg',
+     locale: 'en',
+     clientID: 'xGjDAlZFFBWziZsiOcT3cLvEBq9RsLDA',
+     updated_at: '2015-07-08T17:17:18.947Z',
+     user_id: 'google-oauth2|108550779637671854050',
+     nickname: 'cmariebisque',
+     identities: [ [Object] ],
+     created_at: '2015-07-08T17:17:18.947Z' },
+  _raw: '{"email":"cmariebisque@gmail.com","email_verified":true,"name":"Catherine-Marie Bisque","given_name":"Catherine-Marie","family_name":"Bisque","picture":"https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg","locale":"en","clientID":"xGjDAlZFFBWziZsiOcT3cLvEBq9RsLDA","updated_at":"2015-07-08T17:17:18.947Z","user_id":"google-oauth2|108550779637671854050","nickname":"cmariebisque","identities":[{"access_token":"ya29.qgFdOrD2ojiJGCaCBAorzxP1D8ARFQAjvTzW6sEQSLHyOdP9Q55PnCZmXb8IIGp1Rq3Rkc4skHwrIA","provider":"google-oauth2","expires_in":3600,"user_id":"108550779637671854050","connection":"google-oauth2","isSocial":true}],"created_at":"2015-07-08T17:17:18.947Z"}' }
+false
+true
+200
+success
+true
+false

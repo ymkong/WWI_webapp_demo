@@ -1,0 +1,34 @@
+<html>
+<head>
+{% include "MetaSet.html" %}
+{% include "BsAndJq.html" %}
+
+{% if user.isVisitor %}
+{% include "LoginSet.html" %}
+{% endif %}
+</head>
+<body class="home">
+
+{% include "Nav.html" %}
+
+<div class="overview">
+    <div id="maCemeteryOverview">
+        <div class="container">
+        <div class="container">
+            <h2>The Gravesite</h2>
+            <br>
+            <p>The cemetery 130 acres in extent, was established 14 October 1918 by the American Graves Registration Service on terrain captured by the 32nd Infantry division. The use of the land on which it rests has been granted by the French government free of charge or taxataion in perpetuaity as an exprssion of gratitude to the United States.</p>
+            <center><img src="/public/images/pics/ps2.jpg" class="img-responsive"/></center>
+			<p>The cemetery is rectangular in shape with three quarters of its area devoted to the grave plots and memmorial chapel.</p>
+            <center><img src="/public/images/pics/ps2_2.jpg" class="img-responsive"/></center>
+			<p>The memorial chapel is located on the high ground to the south. A grassy east-west entrance mall runs through the small valley across which the cemetery is located separtating the graves and memorial area from the Visitor's Building and service area.</p>
+            <center><img src="/public/images/pics/ps2_3.jpg" class="img-responsive"/></center>
+        </div>
+    </div>
+        
+    </div>
+    <br><br><br>
+</div>
+
+    </body>
+</html>

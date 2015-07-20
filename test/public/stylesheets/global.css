@@ -1,0 +1,1535 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 
+
+Global Style
+
+*/
+
+/* main body */
+
+
+
+
+/*
+body {
+text-align: center;
+background-color: #636D79;
+margin:0px;
+}
+*/
+<style type="text/css">
+.form-style-9{
+    max-width: 450px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
+}
+.form-style-9 ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.form-style-9 ul li{
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+.form-style-9 ul li  .field-style{
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    padding: 8px;
+    outline: none;
+    border: 1px solid #B0CFE0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+
+}.form-style-9 ul li  .field-style:focus{
+    box-shadow: 0 0 5px #B0CFE0;
+    border:1px solid #B0CFE0;
+}
+.form-style-9 ul li .field-split{
+    width: 49%;
+}
+.form-style-9 ul li .field-split3{
+    width: 33%;
+}
+.form-style-9 ul li .field-full{
+    width: 100%;
+}
+.form-style-9 ul li input.align-left{
+    float:left;
+}
+.form-style-9 ul li input.align-right{
+    float:right;
+}
+.form-style-9 ul li textarea{
+    width: 100%;
+    height: 100px;
+}
+.form-style-9 ul li input[type="button"], 
+.form-style-9 ul li input[type="submit"] {
+    -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    box-shadow: inset 0px 1px 0px 0px #3985B1;
+    background-color: #216288;
+    border: 1px solid #17445E;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+.form-style-9 ul li input[type="button"]:hover, 
+.form-style-9 ul li input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+}
+</style>
+<style type="text/css">
+.form-style-3{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-3 label > span{
+    float: left;
+    width: 100px;
+    color: #F072A9;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #FFD2D2;
+    padding: 20px;
+    background: #FFF4F4;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+    color: #FFA0C9;
+    border-top: 1px solid #FFD2D2;
+    border-left: 1px solid #FFD2D2;
+    border-right: 1px solid #FFD2D2;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+}
+.form-style-3 textarea{
+    width:250px;
+    height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;    
+    font-weight: bold;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+</style>
+
+#container {
+margin: 0 auto;
+width: 1000px;
+height: 100%;
+}
+
+
+.topframe {
+width: 1000px;
+height: 250px;
+color: #B08835;
+font-size:24px; text-align:left; 
+}
+
+
+/*top Title Line - updated may2009*/
+.ttl {
+position: relative; 
+float:left; 
+top:130px;
+font-family:Georgia, "Times New Roman", Times, serif; 
+font-size:16px;
+color:#A06D03;
+width:600px; 
+text-align: center;
+}
+
+
+/*Main Title - updated may2009*/
+.title {
+position: relative; 
+float:left; 
+top: 131px; 
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:24px; 
+color:#A06D03; 
+width: 600px;
+text-align: center;
+}
+
+.titledouble {
+position: relative; 
+float:left; 
+top: 131px; 
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:24px; 
+color:#A06D03; 
+width: 600px;
+text-align: center;
+line-height:1em;
+}
+
+p {
+	color:#1E2740;
+}
+
+
+/*bottom title line - updated may2009*/
+.btl {
+ position: relative; 
+float:left; 
+top:132px;
+font-family:Georgia, "Times New Roman", Times, serif; 
+font-size:16px;
+color:#A06D03; 
+width:600px;
+text-align: center;
+}
+
+
+/* IE6 Please die in a fire */
+html>body .ttl {
+position: absolute;
+padding-top:0px; 
+line-height:2.3; 
+}
+html>body .title {
+position: absolute;
+padding-top:17px;
+line-height:2.3;  
+}
+html>body .btl {
+position: absolute;
+padding-top:46px;
+line-height:2.3;  
+}
+
+/* homepage click - updated may2009 */
+.coinclick { 
+padding-top:87px; 
+padding-left:78px; 
+}
+
+/* homepage click link properties- updated may2009 */
+.coinclick A:active {text-decoration: none; background-color: transparent;  }
+.coinclick A:hover {text-decoration: none; background-color:transparent; }
+.coinclick A img {border : 0;}/*<<added 6/5/13 DT */
+
+.coinprint { 
+display:none;
+padding-top:87px; 
+padding-left:78px;
+border:0;
+}
+
+
+.top1sp {
+	background-image:url(../images/people/top1sp.jpg);  
+	width: 201px;
+	height: 250px;
+	float:left; 
+
+}
+
+.top2sp {
+	width: 1000px;
+	height: 300px; 
+	background-image:url(../images/people/sbhead-r.gif); 
+	background-color:#636C7B;
+	background-repeat:no-repeat;
+	float:left;
+}
+
+
+.title2 {
+width:780px;
+position: absolute;
+/*top: 40px;*/
+}
+
+
+.context {
+	width: 700px; 
+	margin: 0 auto;
+	padding-top:25px;
+	text-align:left;
+	padding-left:70px;
+}
+
+.centercontext {
+	width: 100%; 
+	margin: 0 auto;
+	text-align:center;
+}
+
+
+img.floatLeft { 
+    float: left; 
+	margin: 4px;
+	margin:10px;
+}
+
+img.floatRight { 
+    float: right; 
+    margin: 4px;
+	margin:10px;
+}
+
+.fillersp { 
+	_height:606px;
+	min-height:616px;
+	position: inherit; 
+	width: 1000px; 
+	background-image:url(../images/people/fillersp.jpg);  
+	background-repeat:repeat-y;
+	float:left;
+	text-align:center;
+	padding-bottom: 25px;
+}
+
+
+.footersp {
+	height: 183px;
+	width: 1000px;
+	background-image:url(../images/people/footersp.jpg);
+	background-repeat:no-repeat;
+	float:left;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	color: #1E2740;
+	padding-top: 40px;
+	padding-left:22px;
+}
+
+
+.bottomlinks {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#000; 
+	font-size:11px;
+	height:40px;
+}
+
+
+div.hr {
+  height: 15px;
+  background: #636C7B url(../images/people/hr1.gif) no-repeat scroll center;
+}
+div.hr hr {
+  display: none;
+}
+
+/*
+::selection {
+		background: #981316;
+		color:#fff;
+}
+::-moz-selection {
+		background: #981316;
+		color:#fff;
+*/
+
+::selection {
+		background: #ebd9b3;
+		color:#000;
+}
+::-moz-selection {
+		background: #ebd9b3;
+		color:#000;
+}
+
+h1 {
+	color:#CCCCCC;
+	font-family: "Times New Roman", Times, serif; 
+}
+
+.small { 
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:9px;
+}
+
+.inbetween {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:11px;
+}
+
+.medium {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:12px;
+}
+
+.inbetween2 {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:14px;
+}
+
+.lrgtxt {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:15px;
+}
+
+.jumbo {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#1E2740; 
+	font-size:25px;
+}
+
+.t-small { 
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color:#1E2740; 
+	font-size:9px;
+}
+
+.t-inbetween {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color:#1E2740; 
+	font-size:11px;
+}
+
+.t-medium {
+	font-family: Georgia, "Times New Roman", Times, serif ; 
+	color:#1E2740; 
+	font-size:14px;
+}
+
+.t-inbetween2 {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color:#1E2740; 
+	font-size:16px;
+}
+
+.t-lrgtxt {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color:#1E2740; 
+	font-size:20px;
+}
+
+.t-jumbo {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	color:#1E2740; 
+	font-size:25px;
+}
+
+
+
+
+.black {
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#000000; 
+	font-size:12px;
+}
+
+.bordermara {
+	border-style:groove ;
+	border-right-color:#34517C; 
+	border-left-color:#34517C;
+}
+	
+.imgborder { 
+ border-width: medium;
+ border-style: solid;
+ border-color:#6B2525; 
+} 
+
+.toc {
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	color:#1E2740;
+	font-size:12px;
+	border: medium ridge #981318;
+}
+
+.header {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight:bold;
+	color: #981318;
+	background-color: #e3eeff;
+	border-color:#e3eeff;
+	border-style: ridge;
+	text-align:left;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left:5px;
+	margin-left: 0%;
+}
+
+p.links { 
+	font-family: Geneva, Arial, Helvetica, sans-serif; 
+	color:#CCCCCC; 
+	font-size:11px;
+	font-variant:small-caps;
+}
+
+a:link {
+	color:#981318;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:visited {
+	color: #981318;
+	text-decoration:none;
+	text-decoration:underline;
+}
+a:active {
+	background-color: #e3eeff;
+	text-decoration:none;
+}
+a:hover {
+	color:#efeff1;
+	background-color: #981318; 
+	text-decoration:none;
+}
+
+
+/* artphoto */
+b.bt, b.bt b, b.bb, b.bb b {
+display: block; 
+height: 10px;
+font-size: 1px;
+background:url(../images/roundcorners/grey.gif) no-repeat;
+position:relative
+}
+b.bt {top: -3px; left: -3px}
+b.bt b {background-position:100% -10px; left: 6px}
+b.bb {background-position:0 -20px; top:3px; left: -3px}
+b.bb b {background-position:100% -30px; left: 6px}
+#grey_border {border: #ddd 3px solid}
+/* end of artphoto */
+
+/*breadcrumbs*/
+.crumbtainer {
+	width: 700px; 
+	margin: 0 auto;
+	text-align:left; 
+	margin-left:70px;
+	padding-left:22px; 
+	font:61%/165% "Lucida Grande", Lucida, Verdana, sans-serif; 
+}
+
+.crumbs {
+	background-color:#fdfdfd;
+	height:2.3em;
+	border:1px solid #dedede; 
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+
+/* IE6 Please die in a fire - positioning */
+html>body .crumbtainer {
+	padding-left:112px; 
+}
+
+.crumbs li {
+	float:left;
+	line-height:2.3em;
+	color:#777;
+	padding-left:.75em;
+	}
+.crumbs li a {
+	background:url(../images/people/crumbs.gif) no-repeat right center;
+	display:block;
+	padding:0 15px 0 0;
+	}
+.crumbs li a:link,
+.crumbs li a:visited {
+	color:#777;
+	text-decoration:none;
+	font-weight:bold;
+	}	
+.crumbs a:link,
+.crumbs a:visited,
+.crumbs li a:hover,
+.crumbs li a:focus {
+	text-decoration: none; 
+	background-color: transparent;  
+	color:#981318;
+	}
+/*end of breadcrumbs*/
+
+/* blue links */
+.bluelinks A:link {color: #263358; text-decoration:underline; }
+.bluelinks A:visited { color: #263358; text-decoration: underline; }
+.bluelinks A:active {background-color:AAD4FF;}
+.bluelinks A:hover {text-decoration: none; color:#ddd; background-color: #263358; }
+/* end of blue links */
+
+/* red links */
+.redlinks a:link { 	color:#981318; font-weight:bold; text-decoration:none; }
+.redlinks a:visited { color: #981318; text-decoration:none; text-decoration:none; }
+.redlinks a:active { background-color: #e3eeff; text-decoration:none; }
+.redlinks a:hover {	color:#efeff1; 	background-color: #981318; text-decoration:none;}
+/* end of red links*/
+
+
+/* Blue div Border */
+.blueridgeborder {
+border-style:ridge; 
+padding:.35em;
+border-color:#e3eeff; 
+border-width:2px;
+}
+/* end of Blue div Border*/
+
+/* center anything */
+.center { margin:0 auto; text-align:center;}
+/* end of center anything*/ 
+
+/* Invisible Borders for linked Images */
+.invisilinks { text-decoration: none; background-color: transparent; }
+.invisilinks A:link {text-decoration: none; background-color: transparent; }
+.invisilinks A:visited { text-decoration: none; background-color: transparent;  }
+.invisilinks A:active { text-decoration: none; background-color: transparent;  }
+.invisilinks A:hover { text-decoration: none; background-color: transparent;  }
+/* end of Invisible Borders */
+
+
+
+/* Cool Quotes*/
+.quotez{
+  background: transparent url(../images/people/quoleft.png) left top no-repeat;
+}
+.quotez div {
+  padding: 0 48px;
+  background: transparent url(../images/people//quoright.png) right bottom no-repeat;
+}
+/* End of Cool Quotes*/
+
+/* dashed table borders*/
+.stateband {
+border: 1px dashed #a0adc2; 
+font-variant:small-caps; 
+background-color:#e3eeff; 
+}
+.tempblueridgeborder {
+border-style: groove; 
+border-color: #21457A; 
+border-width:1px;
+}
+/*end of dashed table borders*/
+
+/* list bullet circles*/
+#listcircle li {
+	font: normal 1em Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align:left;
+	border-left: solid 1px #999;
+	list-style:circle;
+	margin: 0;
+	padding: 0 0 1.2em 1em;
+}
+/* end of bullet circles */
+
+/*  round corners blue */
+/* Show only to IE PC \*/
+* html .boxhead h2 {height: 1%;} /* For IE 5 PC */
+
+.sidebox {
+	margin: 0 auto; /* center for now */
+	width: 17em; /* ems so it will grow */
+	background: url(../images/people/sbbo
+		dy-r.gif) no-repeat bottom right;
+	font-size: 100%;
+}
+.boxhead {
+	background: url(../images/people/sbhead-r.gif) no-repeat top right;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.boxhead h2 {
+	background: url(../images/people/sbhead-l.gif) no-repeat top left;
+	margin: 0;
+	padding: 12px 30px 10px;
+	color: white; 
+	font-weight: bold; 
+	font-size: 1.2em; 
+	line-height: 1em;
+	text-shadow: rgba(0,0,0,.4) 0px 2px 5px; /* Safari-only, but cool */
+}
+.boxbody {
+	background: url(../images/people/sbbody-l.gif) no-repeat bottom left;
+	margin: 0;
+	padding: 5px 30px 31px;
+}
+/*  end of round corners blue */
+
+/*New template stuff */
+h4 {
+    font-family: "Lucida Grande", Tahoma;
+	font-size: 11px;
+	font-weight: lighter;
+	font-variant: normal;
+	color:#1E2740;
+	line-height:1.6;
+	letter-spacing: 0.1em;
+}
+
+/* cyan links */
+.cyanlinks A:link { color: #4F75E0;	font-family: font-family: "Lucida Grande", Tahoma; text-transform: none; font-size:12px; font-weight:bold;}
+.cyanlinks A:visited { color: #5C80E2; text-decoration: underline; font-family: "Lucida Grande", Tahoma, Georgia, Garamond, Times, serif; text-transform: none; font-size:12px;}
+.cyanlinks A:active {background-color:#2A3539;}
+.cyanlinks A:hover {text-decoration: none; color:#fff; background-color: #5C80E2;}
+/* end of blue links */
+
+/* new links */
+p.pretext {font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif"; }
+.pretext A:link { font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif"; }
+.pretext A:visited { font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif"; }
+.pretext A:active { font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif"; }
+.pretext A:hover { font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif"; }
+
+
+/* COLOR Dark Blue */
+.darkblue A:link {  color: #07365B; }
+.darkblue A:visited {  color: #0A4E82;  }
+.darkblue A:active {  background-color:none;  }
+.darkblue A:hover {  text-decoration: none; color:#fff; background-color: #07365B; }
+
+/* Links Style UNDERLINE */
+.underline a:link {text-decoration: underline;}
+.underline a:visited {text-decoration:underline;}
+.underline a:active {text-decoration:underline;}
+.underline a:hover {text-decoration:underline;}
+
+/* Links Style NONE-UNDERLINE */
+.nonderline a:link {text-decoration: none;}
+.nonderline a:visited {text-decoration:none;}
+.nonderline a:active {text-decoration:none;}
+.nonderline a:hover {text-decoration:none;}
+
+/* normal Links - notbold */
+.normal a:link {font-weight: normal;}
+.normal a:visited {font-weight: normal;}
+.normal a:active {font-weight: normal;}
+.normal a:hover {font-weight: normal;}
+
+
+
+/* BOLD Links */
+.bold a:link {font-weight:bold;}
+.bold a:visited {font-weight: normal;}
+.bold a:active {font-weight: normal;}
+.bold a:hover {font-weight: normal;}
+
+
+
+
+/* Styles for News and Features - D Allison - Nov 2012 */
+
+.context2 {
+	width: 700px; 
+	margin: 0 auto;
+	padding-top:25px;
+	text-align:left;
+	padding-left:70px;
+}
+
+div.content2 h1 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#A06D03; 
+	margin-bottom:10px;
+}
+
+
+.fillersp2 { 
+	position: inherit; 
+	width: 1000px; 
+	background-image:url(../images/people/fillersp.jpg);  
+	background-repeat:repeat-y;
+	/* float:left; */
+	/* text-align:center; */
+	padding-bottom: 25px;
+	
+}
+
+.fontLucida {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	line-height: 18px;	
+}
+
+
+
+
+
+
+/* Styles Features List Display - D Allison - begun Nov 2012 */
+
+/* override for default CMH a:hover to red for FancyBox Gallery */
+a.fancybox:hover, a.fancybox-nav, a.fancybox-prev, a.fancybox-item, a.fancybox-close { background-color: transparent; }
+
+.textRight { text-align:right; }
+.highlight { background-color:#FF9}
+
+.padding20 { padding:20px;}
+.padding10 { padding:10px;}
+.padding05 { padding:05px;}
+.padding00 { padding:00px;}
+
+.margin10 {margin:10px;}
+.margin00 {margin:00px;}
+
+.border0 { border:0px solid #ccc;}
+.border1 { border:1px solid #ccc;}
+
+.clearLeft { clear:left}
+.clearRight { clear:right;}
+.clearBoth { clear:both;}
+
+.bgWhite { background-color:#fff; }
+.bgGray { background-color:#ccc; }
+.bgBlack { background-color:#000; }
+
+
+p.paraLead {
+	font-size:18px;
+	line-height: 28px;
+	color:#444;
+	}
+
+hr.divider_1ccc {
+	border:0;
+	height:1px;
+	background:#ccc;
+	}
+
+div.featureList {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	text-decoration: none;
+}
+div.featureList ul {}
+div.featureList ul li { 
+	padding:10px; 
+	list-style:none;
+	margin-left:-40px;
+	clear:both;
+	}
+div.featureList ul li img { 
+	margin: 3px 10px 10px 0px; float:left;
+	border:none;
+	}
+div.featureList .date { 
+	display:block; float:right;
+	margin:-5px 30px 10px 10px;
+	font-size:11px; color:#555;
+	font-weight:normal;
+ }
+div.featureList .head {
+	font-weight:bold;
+	}
+div.featureList .abstract {
+	font-weight:normal;
+	}
+
+div.featureList a:link,a:hover,a:visited,a:active { 
+ }
+
+
+/* Styles Feature Page Display - D Allison - Nov 2012 */
+
+div.feature {
+	/* position:relative; */
+	position:relative;
+	}
+
+div.feature h1,h2,h3,h4 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#A06D03; 
+	margin-bottom:10px;
+	
+	/* overrides from earlier donna settings */
+	font-weight: bold;
+	line-height:normal;
+	letter-spacing: normal;
+	}
+
+div.feature h1.featureHead {
+	font-size:24px; 
+	color:#A06D03; 
+	margin-bottom:10px;
+	}
+
+div.feature h2.featureHeadSub {
+	font-size:18px; 
+	color:#666; 
+	margin-top:-10px;
+	}
+
+div.feature h4 {
+	font-size:1em; 
+	color:#A06D03; 
+	margin-bottom:5px;
+	font-weight:bold;
+	}
+
+div.feature p.textLarge {
+	font-size: .83em;
+	line-height:150%;
+	}
+
+div.feature p.leadAbstract {
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#805702; 
+	margin:20px;
+	font-size: .85em;
+	line-height:150%;
+	}
+		
+div.feature .featureImg {
+	border: 1px solid #ccc;
+	margin: 10px 10px 10px 10px;
+	padding 10px;
+	width: 420px;
+	float:right;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	color:#444;
+	}
+
+div.feature img.imgShadow {
+	box-shadow: 5px 5px 10px #aaa;
+}
+
+div.feature .featureImg img {
+	margin: 10px 10px 10px 10px;
+	display:block;
+	}
+
+div.feature .featureImg .caption {
+	display:block;
+	padding:0px 10px 5px 10px;
+	}
+div.feature .featureImg .credit {
+	display:block;
+	text-align:right;
+	padding:0px 10px 10px 10px;
+	}
+
+div.feature .boxedElement{
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 1px solid #ccc;
+}
+
+.boxedElement{
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 1px solid #ccc;
+}
+
+
+/* Boxed images that float left or right with a border and caption definitions */
+
+.imgElementBoxed {
+	border: 1px solid #ccc;
+	background-color:#fff;
+	padding:10px;
+	margin: 10px 0;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 1px solid #ccc;	
+
+	}
+
+.imgElementRight{
+	border: 1px solid #ccc;
+	margin:10px 0 10px 10px;
+	float:right;
+}
+.imgElementLeft{
+	border: 1px solid #ccc;
+	padding:10px;
+	margin:10px 10px 10px 0px;
+	float:left;
+}
+.imgElementFull{
+	border: 1px solid #ccc;
+	padding:10px;
+	margin:10px 0px 10px 0px;
+}
+.imgElementCaption{
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#444;
+	margin:0 0 0 5px; padding: 0;
+}
+.imgElementSource{
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#444;
+	margin:0 0 0 5px; padding: 0;
+	text-align:right;
+}
+/* end image boxed elements */
+
+
+div.feature .byLine {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	line-height: 18px;
+	color:#666666;
+	margin:0 0 0 15px; padding: 0;
+	}
+	div.feature .byLine a {
+		text-decoration:none;
+		font-weight:normal;
+		color:#666;
+		background:none;
+		}
+	div.feature .byLine a:hover {
+		text-decoration:underline;
+		}
+	
+div.feature .caption p {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	line-height: 18px;
+	color:#555;
+	margin:5px 0 5px 0; padding: 0;
+	display:block
+	}	
+
+div.footnote {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	line-height: 18px;
+	color:#ccc;
+	margin:0 0 0 15px; padding: 0;
+	}
+
+
+
+
+
+
+div.feature .caption h3 {
+	font-size:16px;
+	}	
+
+
+div.feature p,ul,li,label {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 18px;
+	font-weight:normal; /* trying to correct bold 2/4/13 dwa */
+	/* color:#FF0000; */
+	}
+
+
+.featureImages img {
+	margin: 20px 10px 5px 10px;
+	padding: 15px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	box-shadow: 5px 5px 10px #aaa;
+}
+
+
+
+
+
+/* List Styles ................................... */
+
+ul.listLinks, ul.listPdf {}
+
+ul.listInline {}
+
+ul.listLinks li {
+	list-style:none;
+	background-image:url(../images/icons/ico_link_1.gif);
+	background-repeat:no-repeat;
+	background-position: 0 3px;
+	margin: 3px 3px 3px -20px;
+	padding: 3px 3px 3px 20px;
+}
+ul.listPdf li {
+	list-style:none inside;
+	background-image:url(../images/icons/ico_pdf_1.gif);
+	background-repeat:no-repeat;
+	background-position: 0 3px;
+	margin: 3px 3px 3px -20px;
+	padding: 3px 3px 3px 20px;
+}
+ul.listContacts li {
+	list-style:none;
+	background-image:url(../images/icons/ico_email_1.gif);
+	background-repeat:no-repeat;
+	background-position: 0 6px;
+	margin: 3px 3px 3px -20px;
+	padding: 3px 3px 3px 20px;
+	}
+ul.listBasic {}
+ul.listPlain li {
+	list-style:none;
+	margin: 5px;
+	}
+
+ul.listBooks { 
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	color:#333333;
+	margin: 3px 3px 3px 5px;
+		 }
+ul.listBooks li {
+	list-style:none;
+	background-image:url(../images/icons/ico_pub_1.gif); 
+	background-repeat:no-repeat;
+	background-position: 0 4px;
+	margin: 3px 3px 3px 3px;
+	padding: 3px 3px 3px 20px;
+	}
+ul.listBooks li em {
+	font-style:normal;
+	font-weight:bold;
+	}	
+ul.listBooks li a {
+	font-weight:bold;
+	background-color: transparent;	
+	}
+ul.listBooks li a:link, a:active {
+	color:#981316;
+	}	
+ul.listBooks li a:visited {
+	color:#99595a;
+	}	
+ul.listBooks li a:hover {
+	text-decoration:underline;
+	}	
+
+
+
+ul.listJumpVert {}
+ul.listJumpVert li { padding:0 0 5px 0px; margin: 2px 0;  list-style:none; }
+ul.listJumpVert li a {
+	padding-left: 16px; color:#0066CC; text-decoration: none;
+	background: url('../images/icons/ico_bullet_jumpBlue.jpg') no-repeat 0px 3px;
+}
+ul.listJumpVert li a:hover { 
+	background-image: url('../images/icons/ico_bullet_jumpOrange.jpg');
+	text-decoration:none; color:#000000; }
+
+
+ul.listJumpHorz {}
+ul.listJumpHorz li { padding:0 20px 20px 0px; margin: 2px 0;  list-style:none; display:inline }
+ul.listJumpHorz li a {
+	padding-left: 16px; color:#0066CC; text-decoration: none;
+	background: url('../images/icons/ico_bullet_jumpBlue.jpg') no-repeat 0px 3px;
+}
+ul.listJumpHorz li a:hover { 
+	background-image: url('../images/icons/ico_bullet_jumpOrange.jpg');
+	text-decoration:none; color:#0066CC;
+	background-color: #fff; }
+
+
+
+ul.listHorzPubs li { padding:0 20px 20px 0px; margin: 2px 0; list-style:none; display:inline-block; border: 0px solid #ccc; vertical-align:text-top }
+
+
+
+ol.ol-default {
+	color:#333;
+	}
+
+ol.ol-default li {
+	margin: 10px 0 10px -10px;
+	}
+
+
+/* Link Styles ................................... */
+
+a.linkDefault:link, a.linkDefault:visited {
+	color:#333;
+	font-weight:normal;
+	text-decoration:underline;
+}
+a.linkDefault:hover {
+	color:#900;
+	background:none;
+	text-decoration:underline;
+}
+
+a.linkImage:link, a.linkImage:visited {}
+a.linkImage:hover {}
+img.linkedImage {
+	border:none;
+	}
+
+
+
+a.linkPdf:link, a.linkPdf:visited {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 20px;
+	background: url('../images/icons/ico_pdf_1.gif') no-repeat left bottom;
+	color:#333;
+	font-weight:normal;
+	text-decoration:underline;
+	padding: 2px 0 2px 20px;
+	}
+a.linkPdf:hover {
+	color:#900;
+	background:none;
+	text-decoration:underline;
+}
+
+
+a.linkDown:link, a.linkDown:visited {
+	background: url('../images/icons/ico_bullet_jumpBlue.jpg') no-repeat left center;
+	padding: 0 0 0 18px;
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 18px;
+	font-weight:normal;
+	color:#06C;
+	}
+a.linkDown:hover {
+	background: url('../images/icons/ico_bullet_jumpOrange.jpg') no-repeat left center;
+	color:#06C;
+	text-decoration:underline;
+	}
+
+
+a.linkUp:link, a.linkUp:visited {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	background: url('../images/icons/ico_bullet_jumpGray_up.jpg') no-repeat right center;
+	padding: 0 15px 0 0;
+	font-size:12px;
+	line-height: 18px;
+	color:#666;
+	font-weight:normal;
+	background-color: transparent;
+}
+
+a.linkUp:hover, a.linkUp:active {
+	background: url('../images/icons/ico_bullet_jumpBlue_up.jpg') no-repeat right center;
+	color:#03C;
+	text-decoration:underline;
+}
+
+div.asideRight200 {
+	float:right;
+	margin:10px;
+	padding:10px;
+	border: 1px solid #ccc;
+	width:200px;
+	}
+
+
+
+/* Museum Div specific styles | created by DA  */
+.museumBanner {
+	background: url(../html/museums/images/banner_museumDirectory_01.jpg) no-repeat top right; height:300px; position:relative;	
+	border: 0px solid #ccc;
+
+	/*
+	<!--[if IE]>
+	position:relative;	
+	margin-top:-40px;
+    <![endif]-->
+	*/
+}
+
+dl.listDefinition {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	color:#333333;
+	margin: 3px 3px 3px 5px;	
+	font-size:.83em;
+	color:#333;
+	
+	}
+dl.listDefinition dt {
+	margin:15px 0 3px 0;
+	font-weight:bold;
+	}
+dl.listDefinition dd {
+	margin:0 0 0 20px;
+	color:#666;
+	font-weight:normal;
+	}
+dl.listDefinition dd a {
+	font-weight:normal;
+	color:#06C;
+	}
+dl.listDefinition dd a.linkExternal {
+	background:url(../images/icons/ico_linkOffsite.jpg) no-repeat right;
+	padding-right:15px;
+	}
+dl.listDefinition dd a.linkEmail {
+	background:url(../images/icons/ico_email_1.gif) no-repeat right;
+	padding-right:22px;
+	}
+
+
+
+
+dl.listTimeline{
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	color:#333333;
+	margin: 3px 3px 3px 5px;	
+	font-size:.83em;
+	color:#333;	
+	}
+dl.listTimeline dt {
+	margin:15px 0 3px 0;
+	font-weight:bold;
+	}
+dl.listTimeline dd {
+	margin:0 0 10px 10px;
+	color:#444;
+	font-weight:normal;
+	}
+
+
+
+
+/* Book Review specific styles | created by DA  */
+.bookReviewBanner {
+	background: url(../images/bannerSections/banner_bookReviews.jpg) no-repeat top right; height:300px; position:relative;	
+	border: 0px solid #ccc;
+
+	/*
+	<!--[if IE]>
+	position:relative;	
+	margin-top:-40px;
+    <![endif]-->
+	*/
+}
+
+
+
+/* Medal of Honor specific styles | created by DA  */
+.mohBanner {
+	background: url(../html/moh/images/medalOfHonor_400x.png) no-repeat top right; height:300px; position:relative;	
+	border: 0px solid #ccc;
+
+	/*
+	<!--[if IE]>
+	position:relative;	
+	margin-top:-40px;
+    <![endif]-->
+	*/
+}
+
+.mohCitation {}
+
+ul.mohListDetails {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:1em;
+	line-height: 18px;
+	color:#666;
+	margin: 0 0 0 15px; padding: 0;
+	}
+.mohListDetails ul li {	}
+.mohEraSelector {
+	position:relative;
+	width:280px;
+	right:0px;
+	top:-80px;
+	margin:0;
+	padding:0;
+	float:right;
+	border: 0px solid #ccc;
+	z-index:100;
+	<!--[if IE]>
+	top:0px;
+	padding:5px 5px -15px 5px;
+    <![endif]-->
+}
+
+
+
+/* Image styles | created by DA  */
+
+
+.imgShadow {
+	box-shadow: 5px 5px 10px #aaa;
+}
+
+.img-rounded {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.img-circle {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+.img-responsive {
+	max-width:100%;
+	height:auto;
+}
+
+.bookShadow {
+	box-shadow: 5px 5px 10px #aaa;
+}
+
+/* */
+
+div.googleSearch {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;	
+	}
+	
+/* */
+.tableData {
+	font-family: Lucida Sans, Arial, Helvetica, sans-serif;
+	font-size:.8em;
+	background-color:#FFF;
+}
+.tableData th {
+	border-right: 1px solid #ccc;
+	border-bottom: 5px solid #ccc;
+	padding:5px;
+	}
+.tableData td {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align:right;
+	vertical-align:bottom;
+	padding:5px;
+	}
+.tableData tr td:first-child {
+	text-align:left;
+	}
+
+.tableData {}
+.tableData {}
+.tableData {}
+.tableData {}
+
+/*
+a:link {
+	color:#981318;
+	font-weight:bold;
+	text-decoration:none;
+	color:
+}
+a:visited {
+	color: #981318;
+	text-decoration:none;
+	text-decoration:underline;
+}
+a:active {
+	background-color: #e3eeff;
+	text-decoration:none;
+}
+a:hover {
+	color:#efeff1;
+	background-color: #981318; 
+	text-decoration:none;
+}
+
+*/
+
+
+.subsiteNavSelector {
+	/* position:relative; */
+	width:250px;
+	/* right:0px;
+	top:-80px; */
+	margin:-49px 0 0 0;
+	padding:0;
+	float:right;
+	border: 0px solid #ccc;
+	z-index:100;
+	text-align:right;
+	<!--[if IE]>
+	top:0px;
+	padding:5px 5px -15px 5px;
+    <![endif]-->
+}

@@ -1,0 +1,48 @@
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}    
+</head>
+<body class="home">
+
+    {% include "Nav.html" %}
+    
+<div class="places2see">
+    <div class="container">
+        <h2>Places to See</h2>
+        <p>Here are a list of points of interests to see. </p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/places2see?pl=chapel"><img src="/public/images/pics/ps6.jpg"/></a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/places2see?pl=gravesite"><img src="/public/images/pics/ps2.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/places2see?pl=lostbattalion"><img src="/public/images/pics/ps5.jpg"/></a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/places2see?pl=montfaucon"><img src="/public/images/pics/ps1.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/places2see?pl=ps4"><img src="/public/images/pics/ps4.jpg"/></a>
+                </div>
+                <div class="thumbnail">
+                   <a href="/places2see?pl=visitor"> <img src="/public/images/pics/ps3.jpg"/></a>
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

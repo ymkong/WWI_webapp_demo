@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}
+
+    <style type="text/css">
+        .fbboard {
+            margin-left: -50px;
+        }
+        .fbboard a {
+            font-size: 12px;
+            font-weight: bold;
+            padding: 14px 10px;
+        }
+        .fbboard li {
+            display: inline;
+        }
+    </style>
+
+</head>
+<body class="home">
+
+    {% include "Nav.html" %}
+
+    <div class="container" id = "mystories">
+        <h1>My Stories</h1>
+        {% for us in ua %}
+            <div id="storyblock{{us.idStory}}">
+                <hr>
+                <h2>{{ us.title }}</h2>
+                <p>by {{user._json.nickname}}, {{us.datetime}}</p>
+                {% if us.lat == 0 %}
+                {% if us.lng == 0 %}
+                    <p>location not provided.</p>
+                {% endif %}
+                {% endif %}
+
+                {% if us.lat != 0 or us.lng != 0 %}
+                    <p>location: lat: {{us.lat}}, lng: {{us.lng}}</p> 
+                {% endif %}
+
+                <div class="comment">
+                    <p>{{us.content}}</p>
+                </div>
+            </div>
+            <div class="fbboard">
+                <ul>
+                    <li><a class="btn"><span class="glyphicon glyphicon-thumbs-up"></span><span>{{us.num_likes}}</span></a></li>
+                    <li><a class="btn"><span class="glyphicon glyphicon-comment"></span><span>{{us.num_comments}}</span></a></li>
+                    <li><a class="btn"><span class="glyphicon glyphicon-share-alt"></span><span>{{us.num_shares}}</span></a></li>
+                </ul>
+            </div>
+        {% endfor %}
+        
+        {% if ua.length == 0 %}
+            <p>You have not told any stories here.</p>
+        {% endif %}
+    </div>
+
+    <div class="container" id = "mystories">
+        <h1>My Customized Tour</h1>
+        <hr>
+        {% if user.hasTour %}
+            <div>
+                <p>{{user.tour}}</p>
+            </div>
+        {% endif %}
+        
+        {% if !user.hasTour %}
+            <p>You don't have any customized tour currently.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

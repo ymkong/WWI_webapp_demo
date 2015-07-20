@@ -1,0 +1,32 @@
+<html>
+<head>
+{% include "MetaSet.html" %}
+{% include "BsAndJq.html" %}
+
+{% if user.isVisitor %}
+{% include "LoginSet.html" %}
+{% endif %}
+</head>
+<body class="home">
+{% include "Nav.html" %}
+
+<div class="overview">
+    <div id="maCemeteryOverview">
+        <div class="container">
+            <h2>Chapel</h2>
+            <br>
+            <p>The chapel occupies the center of the memorial. Engraved above the entrance is the following: DEDICATED TO THE MEMORY OF THOSE WHO DIED FOR THEIR COUNTRY.</p>
+            <center><img src="/public/images/pics/ps6.jpg" class="img-responsive"/></center>
+			<p>Located just inside the entrance to the chapel is a stained glass window with the insignia of units that participated in the offensive</p>
+            <center><img src="/public/images/pics/ps6_2.jpg" class="img-responsive"/></center>
+			<p>Flanking the chapel outside are the two memorial loggias, each inscribed with the name of the dead and missing from the Offensive. Additionally, the dead and missing from the northern Russian Campaign are inscribed here.</p>
+            <center><img src="/public/images/pics/ps6_3.jpg" class="img-responsive"/></center>
+        </div>
+    </div>
+        
+    </div>
+    <br><br><br>
+</div>
+
+    </body>
+</html>

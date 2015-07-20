@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}
+    <script src="/public/javascripts/jquery.shorten.js"></script>
+    <script type="text/javascript" src="/public/javascripts/social.js"></script>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1607940966139894',
+                xfbml      : true,
+                version    : 'v2.3'
+            });
+        };
+          
+        (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <style type="text/css">
+        .fbboard {
+            margin-left: -50px;
+        }
+        .fbboard a {
+            font-size: 12px;
+            font-weight: bold;
+            padding: 14px 10px;
+        }
+        .fbboard li {
+            display: inline;
+        }
+        .usercomment {
+          clear: both;
+          list-style: none;
+          padding-left: 0;
+          width: 70%;
+        }
+        .usercomment li {
+          background-color: #fff;
+          border: 1px solid #d8d8d8;
+          padding-top: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 0px;
+          margin-bottom: 10px;
+          word-wrap: break-word;
+          min-height: 42px;
+        }
+    </style>
+
+</head>
+<body class="home">
+
+    {% include "Nav.html" %}
+
+<div class="container">
+    <h1>Stories: {{cat}}</h1>
+</div>
+
+<div class = "displaystory">
+    {% for us in ua %}
+        <div class="container" id="storyblock{{us.idStory}}">
+            <hr>
+            <h2>{{ us.title }}</h2>
+            <p>by {{us.authorname}}, {{us.datetime}}</p>
+            {% if us.lat == 0 %}
+            {% if us.lng == 0 %}
+                <p>location not provided.</p>
+            {% endif %}
+            {% endif %}
+
+            {% if us.lat != 0 or us.lng != 0 %}
+                <p>location: lat: {{us.lat}}, lng: {{us.lng}}</p> 
+            {% endif %}
+
+            <div class="comment">
+                <p>{{us.content}}</p>
+            </div>
+        </div>
+        <div class="container">
+        <div class="fbboard">
+            <ul>
+                <li><a class="btn" onclick="social({{6*us.idStory}})">Like</a></li>
+                <li><a class="btn" onclick="social({{6*us.idStory+1}})">Comment</a></li>
+                <li><a class="btn" onclick="social({{6*us.idStory+2}})">Share</a></li>
+                <li><a class="btn"><span class="glyphicon glyphicon-thumbs-up"></span><span id="{{6*us.idStory}}">{{us.num_likes}}</span></a></li>
+                <li><a class="btn"><span class="glyphicon glyphicon-comment"></span><span id="{{6*us.idStory+1}}">{{us.num_comments}}</span></a></li>
+                <li><a class="btn"><span class="glyphicon glyphicon-share-alt"></span><span id="{{6*us.idStory+2}}">{{us.num_shares}}</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="container" id="{{6*us.idStory+4}}" style="display: none">
+            <form>
+                <div class="form-group">
+                    <textarea id="{{6*us.idStory+5}}" class="form-control status-box" rows="2" {% if user.isVisitor %} placeholder="Please login to comment" disabled {% endif %} {% if user.isUser %} placeholder="write a comment" {% endif %}></textarea>
+                </div>
+            </form>
+            <div class="button-group">
+                <a href="#" {% if user.isVisitor %} class="btn btn-primary disabled" {% endif %} {% if user.isUser %} class="btn btn-primary" {% endif %} onclick="commentSubmit({{us.idStory}}, {{user._json.ww1_id}},'{{user._json.nickname}}')">Post</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="usercomment" id="{{6*us.idStory+3}}" style="display: none">
+                {% for Icom in us.comment %}
+                    <li>
+                        <p>by {{Icom.authorname}}, at {{Icom.time}}</p>
+                        <p>{{Icom.content}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        </div>
+    {% endfor %}
+
+    {% if ua.length == 0 %}
+        <div class="container">
+            <p>There is currently no story in this category.</p>
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div>
+            <h2><a href="/tellstories">Tell us your stories</a><h2> 
+        </div>
+    </div>
+</div>
+
+<script language="javascript">
+    $(document).ready(function() {
+        $(".comment").shorten();
+    });
+</script>
+
+</body>
+</html>

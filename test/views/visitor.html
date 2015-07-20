@@ -1,0 +1,32 @@
+<html>
+<head>
+{% include "MetaSet.html" %}
+{% include "BsAndJq.html" %}
+
+{% if user.isVisitor %}
+{% include "LoginSet.html" %}
+{% endif %}
+</head>
+<body class="home">
+{% include "Nav.html" %}
+
+<div class="overview">
+    <div id="maCemeteryOverview">
+        <div class="container">
+            <h2>Visitor Building</h2>
+            <br>
+            <p>The Visitor's Building is located to the north of the cemetary. Here visitors may obtain information, sign the register and pause to refresh themselves. During visiting hours a member of staff is available in the bulding to answer questions and provide information on burials, accomadations in the area, and other areas of interest.</p>
+            <br>
+            <center><img src="/public/images/pics/ps3.jpg" class="img-responsive"/></center>
+            <br>
+	    <p>Public restrooms and drinking fountains are available in the Visitor's Center</p><br>
+     	    <center><img src="/public/images/pics/ps3_2.jpg" class="img-responsive"/></center>
+        </div>
+    </div>
+        
+    </div>
+    <br><br><br>
+</div>
+
+    </body>
+</html>

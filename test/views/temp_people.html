@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}
+    <link href="/public/stylesheets/global.css" rel="stylesheet" type="text/css"/>
+    <script src="/public/javascripts/client_api_call.js"></script>
+
+    <style type="text/css">
+        #report { border-collapse:collapse;}
+        #report h4 { margin:0px; padding:0px;}
+        #report img { float:right;}
+        #report ul { margin:10px 0 10px 40px; padding:0px;}
+        #report th { background:#7CB8E2 url(/public/images/people/header_bkg.png) repeat-x scroll center left; color:#fff; padding:7px 15px; text-align:left;}
+        #report td { background:#C7DDEE none repeat-x scroll center left; color:#000; padding:7px 15px; }
+        #report tr.odd td { background:#fff url(/public/images/people/row_bkg.png) repeat-x scroll center left; cursor:pointer; }
+        #report div.arrow { background:transparent url(/public/images/people/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
+        #report div.up { background-position:0px 0px;}
+    </style>
+
+</head>
+
+<body>
+
+{% include "Nav.html" %}
+
+<div class="container">
+    <h2>People In The War </h2>
+    <!-- <hr width="100%"> -->
+    <div class="lrgtxt">The United States entered World War I in April 1917. Over 4.7 million men and women served in the regular U.S. forces, national guard units, and draft units. There were 53,402 killed in action, 63,114 deaths from disease and other causes, and about 205,000 wounded. New York, Pennsylvania, Illinois, and Ohio furnished the most soldiers.
+    </div>
+<hr>
+<div class="search">
+    <h3 align ="left">Search:</h3>
+    <!-- <hr width="100%"> -->
+
+    <form class="form-style-9" id="searchForm" method="post">
+        <ul>
+            <li>
+                <input type="text" name="first_name" class="field-style field-split3 align-left" placeholder="first name"/>
+                <input type="text" name="last_name" class="field-style field-split3 align-left" placeholder="last name"/>
+                <select id="myselect" name="hometown" class="field-style" style="width: 33%; float: right">
+                    <option value="">Select howntown</option>
+                    <option value="New York">New York</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Washington, D.C.">Washington, D.C.</option>
+                    <option value="Others">Others</option>
+                </select>
+            <li>
+            <button type="button" id="btn-1" class="btn btn-default">Submit</button>
+            </li>
+        </ul>
+    </form>
+
+    <label>Results:</label><p id="report_status"></p>
+        <table id ="report">
+          <tr>
+            <th width="15%">Name</th>
+            <th width="15%">Hometown</th>
+            <th width="15%">Title</th>
+            <th width="15%">Branch</th>
+            <th width="15%">Gender</th>
+            <th width="15%">Years</th>
+            <th></th>
+          </tr>
+        </table>
+
+    <script>
+        $("#btn-1").click(function(){
+        search_record("#searchForm","report");
+        });
+    </script>
+
+</div>
+
+<div>
+
+<hr>
+
+<h3>Create a record:</h3><p id="kindreminder"></p><p id="record_status"><p>
+<form class="form-style-9" id="recordForm">
+    <ul>
+    <li>
+        <input type="text" name="first_name" class="field-style field-split3 align-left" placeholder="first name"/>
+        <input type="text" name="middle_name" class="field-style field-split3 align-middle" placeholder="middle name"/>
+        <input type="text" name="last_name" class="field-style field-split3 align-right" placeholder="last name"/>
+    </li>
+    <li>
+        <input type="text" name="title" class="field-style field-split align-left" placeholder="title" />
+        <input type="text" name="years" class="field-style field-split align-right" placeholder="years" />
+    </li>
+    <li>
+        <input type="text" name="branch" class="field-style field-split align-left" placeholder="branch" />
+        <input type="text" name="hometown" class="field-style field-split align-right" placeholder="hometown" />
+    </li>
+    <li>
+    <input type="text" name="page_link" class="field-style" style="width: 79%" placeholder="page_link" />
+    <select name="gender" class="field-style" style="width: 20%; float: right">  
+        <option value="">Select gender</option>
+        <option value="Female">Female</option>    
+        <option value="Male">Male</option>
+    </select>
+    </li>
+    <li>
+     <button type="button" id="btn-2" class="btn btn-default">Submit</button>
+    </li>
+</form>
+  
+
+<script>
+     $(document).ready(function(){
+        $("#btn-2").click(function(){
+        submit_record("#recordForm","record_status");
+        });
+
+        var isVisitor = '{{user.isVisitor}}';
+        if(isVisitor == 'true'){
+            $("#recordForm :input").prop("disabled", true);
+            document.getElementById("kindreminder").innerHTML = "Please login to create a record."
+            // document.getElementById("war").disabled = true;
+            // document.getElementById("love").disabled = true;
+            // document.getElementById("family").disabled = true;
+            // document.getElementById("others").disabled = true;
+            // document.getElementById("people").disabled = true;
+
+            // $("#title").val(first_name + " " + last_name);
+
+            // $("#aboutp").val(1);
+            // $("#cid").val('{{user.character_id}}');
+        }
+
+    });
+</script>
+
+<hr>
+
+</div>
+    <div>
+        <h3>Soldier Record Lists</h3>
+            <!-- <hr width="100%"> -->
+        <table width="800" border="0" cellspacing="0" cellpadding="0">
+                        <div>
+                        <p>Click on individual link to access additional resources. Use the search function above to access our archive.</p>
+                        </div>
+
+                     <div>
+                         <ul>
+                         {% for rec in record %}
+                            <li class="lrgtxt">
+                            {% if rec.page_link %}
+                                <a href={{rec.page_link}}> {{rec.first_name}} {{rec.middle_name}} {{rec.last_name}}({{rec.hometown}})</a> 
+                            {% else %}    
+                               {{rec.first_name}} {{rec.middle_name}} {{rec.last_name}}({{rec.hometown}})
+                            {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>                 
+            <!-- </td> -->
+            <!-- </tr> -->
+        </table>
+    </div>
+
+    <hr width="100%">
+    <div class="inbetween2"align="center">
+        <a href="/">Back to Home</a> Or <a href="/viewstories">View Stories<a></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

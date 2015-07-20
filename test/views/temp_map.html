@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "MetaSet.html" %}
+    {% include "BsAndJq.html" %}
+    
+    {% if user.isVisitor %}
+    {% include "LoginSet.html" %}
+    {% endif %}    
+
+    <style type="text/css">
+        html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDF5gohqDmnOqH5bykwtgoxl1D15J-pkhY">
+    </script>
+    <script src="/public/javascripts/jquery.shorten.js"></script>
+    <script type="text/javascript" src="/public/javascripts/map_client.js"></script>
+</head>
+
+<body onload="initialize()">
+  
+    {% include "Nav.html" %}
+
+	<input id="userID" style='display:none;' value="{{user._json.ww1_id}}"></input>
+
+    <input id="pac-input-source" type="text" placeholder="Destination" onkeydown="findPlace()">
+    <button id="add-point" onclick="addWaypoint()">+</button>
+    <button id="del-point" onclick="removeWaypoint()">-</button>
+
+    <button id='save-tour' onclick="saveCustomTour()">Save Custom Tour</button>
+
+    <div id="map-canvas" style="position:relative; margin-top:-20px"></div>
+
+</body>
+</html>

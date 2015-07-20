@@ -1,0 +1,10 @@
+{
+    "id": "1",
+    "name": "Montfaucon Memorial",
+    "description": "The monument is a large column with a statue on top of it. There is an observation platform at the top. It marks the location of a German strong point during the initial American assault.",
+    "coordinates": [
+        49.284167,
+        4.536333
+    ],
+    "image":"ps1_1.jpg"
+}

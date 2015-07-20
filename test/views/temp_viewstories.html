@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include "MetaSet.html" %}
+	{% include "BsAndJq.html" %}
+	
+	{% if user.isVisitor %}
+	{% include "LoginSet.html" %}
+    {% endif %}    
+</head>
+<body>
+
+   {% include "Nav.html" %}
+       
+<div class="viewstory">
+    <div class="container"> 
+        <h1>View Stories</h1>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <a href="/war"><img src="/public/images/pics/ps111.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <a href="/love"><img src="/public/images/pics/ps222.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                   <a href="/family"> <img src="/public/images/pics/ps333.jpg"/></a>
+                </div>          
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                    <a href="/person"><img src="/public/images/pics/ps555.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="thumbnail">
+                     <a href="/others"> <img src="/public/images/pics/ps444.jpg"/></a>
+                </div>          
+            </div>
+        </div>
+
+        <div>
+            <h2><a href="/tellstories">Tell us your stories</a><h2> 
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

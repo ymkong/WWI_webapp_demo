@@ -1,0 +1,10 @@
+{
+    "id": "3",
+    "name": "Visitor Building",
+    "description": "The visitor building is open during business hours and has public restrooms",
+    "coordinates": [
+        49.336117,
+        5.093237
+    ],
+    "image": "ps3.jpg"
+}
