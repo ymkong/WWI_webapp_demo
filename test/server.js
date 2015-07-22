@@ -1,8 +1,8 @@
 // for development
-global.cburl = 'http://localhost:3000/callback';
-global.pn = 3000;
-// global.cburl = 'http://52.2.222.157:9000/callback';
-// global.pn = 9000;
+//global.cburl = 'http://localhost:3000/callback';
+//global.pn = 3000;
+global.cburl = 'http://52.2.222.157:9000/callback';
+global.pn = 9000;
 
 var express =      require('express'),
     http =         require('http'),
